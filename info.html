@@ -1,0 +1,56 @@
+<!-- start content welcome user -->
+<div class="container-user d-flex flex-column w-100 px-3 py-3 mb-4">
+
+  <div class="container-spec d-flex align-content-between flex-wrap mt-3 mb-4 data-spec" id="data-spec">
+    <div class="spec-item flex-fill justify-content-column m-0 mt-2 radius-16">
+      <div class="py-3">
+        <p class="text-center headline5 font-semibold text-black-500">Tentang Aplikasi U-Tix</p>
+      </div>
+      
+      <div class="text-center m-auto">
+        <button class="w-32 h-10 bg-cyan-500 hover:bg-cyan-600 flex align-items-center m-auto rounded-2xl mb-4" onclick="infoApk();">
+          <i class="text-white ml-2 fi fi-rr-info"> Info Aplikasi</i>
+        </button>
+      <h2 class="py-2 mt-4 text-center font-extrabold text-3xl text-orange-400">Dukung Developer U-Tix!</h2>
+      <p class="text-center">U-Tix Membuka Donasi selama masa pengembangan</p>
+
+      <div class="mx-auto text-center items-center">
+        <p class="pt-4 text-lg headline6">Donasi dapat diberikan melalui</p>
+        <div class=" flex flex-wrap">
+          <a class="mx-auto p-2"  href="https://saweria.co/ronext" target="_blank">
+            <img src="https://saweria.co/twitter_card.png" class="w-24" alt="" srcset="">
+          </a>
+          <p class="m-auto bodytext1">dan</p>
+          <a class="mx-auto p-2" href="https://trakteer.id/ronext/tip" target="_blank">
+            <img src="https://cdn.trakteer.id/images/mix/trakteer-icon-thumbnail.png" class="w-24" alt="" srcset="">
+          </a>
+            
+        </div>
+      </div>
+      <div class="text-center mx-auto">
+        <p class="pt-4 text-lg headline6">Atau bisa juga secara langsung dari U-Tix</p>
+        <div class=" bg-white items-center text-center pb-8">
+          <div class=" pt-4">
+            <label for="nickname">Nickname/E-Mail: </label><br>
+            <input class="w-60 h-10 box-border border-2 border-slate-500 border-solid rounded-xl shadow-md" placeholder="Masukkan nickname" name="nickname" type="text" id="nickname">
+          </div>
+          <div class=" pt-6">
+            <label for="donate">Nominal Donasi: </label><br>
+            <input class="w-60 h-10 box-border border-2 border-slate-500 border-solid rounded-xl shadow-md" placeholder="Masukkan nominal ... " name="donate" type="number" id="donate">
+          </div>
+          <div class=" pt-8">
+            <button class=" m-auto w-40 h-10 bg-green-500 hover:bg-green-600 rounded-2xl text-white bodytext2" name="proses" onclick="addList(), terimaKasih();" value="tambah" id="proses">Ikhlaskan</button>
+          </div>
+        </div>
+        <h2 class=" font-bold text-lg">Daftar donatur: </h2>
+              
+        <ul class="text-lg" id="list"></ul>
+  
+        <div class="py-4 text-lg">Total Donasi: Rp.<span id="total_donasi">0</span></div>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+<!-- end content welcome user -->

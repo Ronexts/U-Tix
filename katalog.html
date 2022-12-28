@@ -1,0 +1,227 @@
+<div id="container-user d-flex flex-row justify-content-between px-3 py-4">
+  <!-- start content welcome user -->
+  <div class="container-user d-flex flex-row justify-content-between px-3 pt-4 pb-2">
+    <div class="content-text flex-column">
+      <img src="assets/images/UTtix-trans.png" class="w-32" onclick="home();"></img>
+      
+    </div>
+    <a class="hidden content-image-profile flex-shrink" onclick="">
+      <div class="frame-image">
+        <img src="assets/images/user.png" alt="profile" srcset="" id="dataImage" />
+      </div>
+    </a>
+  </div>
+  <!-- end content welcome user -->
+
+      <!-- Header Start -->
+      <header class="bg-transparent absolute top-0 left-0 w-full items-center z-10">
+        
+    </header>
+    <!-- Header End -->
+  
+  <!-- start content form search -->
+  <form class="form-search container-search mx-3 mb-4 d-flex justify-content-between align-items-center" style="height: 48px">
+    <div class="input-group-search bg-white h-100">
+      <input type="text" name="search" id="search" class="bodytext1 color-black800" placeholder="Cari event di sini ..." required />
+    </div>
+    <button type="button" onclick="search" class="h-100 d-flex align-items-center justify-content-center button-search ml-3" style="width: 48px">
+      <i class="fi fi-br-search text-white" onclick="searchHandler(),fiturGagal();"></i>
+    </button>
+  </form>
+  <!-- end content form search -->
+  
+  <p class="headline6 color-black500 pl-3 m-0" id="dataName">
+    Event yang bisa dipesan:
+  </p>
+
+  <!-- start content product list -->
+  <div class="container-products w-100" loading="lazy">
+    <div id="data" class="container-product d-flex justify-content-start d-flex w-100 flex-wrap px-2 py-2" loading="lazy">
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/cf16.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Comic Frointer 16</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Jakarta</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.60,000</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="addListTiketA(), cart()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/icc.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Indonesia Comic Con</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Jakarta</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.50,000</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="addListTiketB(), cart()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/hitc.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Head in the Clouds Jakarta</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Jakarta</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.200,000</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="addListTiketC(), cart()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/avaid.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">AVA Indonesia</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Jakarta</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.60,000</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="addListTiketD(), cart()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/jjm.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Jakarta Japan Matsuri</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Jakarta</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.50,000</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="addListTiketE(), cart()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+
+      <div class="product-items w-50 flex-column" loading="lazy">
+        <img class="m-auto h-36 w-auto pb-2" src="assets/images/utixcomingsoon.jpg" loading="lazy">
+        <p class="bodytext1 semibold m-0 px-2 text-secondary">Event Coming Soon!</p>
+        <p class="bodytext2 color-black300 m-0 px-2">Coming Soon!</p>
+        <p class="caption m-0 py-1 px-2 text-primary">Rp.-</p>
+        
+        <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3" name="proses" onclick="segeraDatang()" id="proses">
+        Pesan Tiket</button>
+      </div>
+    </div>
+
+    
+    
+    <div id="" class="container-product d-flex justifycontent-start d-flex w-100 flex-wrap px-2 py-2">
+    </div>    
+  </div>
+  <!-- end content product list -->
+</div>
