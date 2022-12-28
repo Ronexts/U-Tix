@@ -1,18 +1,11 @@
 const CACHE_NAME = "utix-lite";
 const toCache = [
   "/",
-  "manifest.json",
+  "/manifest.json",
   "assets/js/register.js",
   "assets/css/bootstrap.css",
-  "assets/css/bootstrap.css.map",
   "assets/css/styles.css",
   "assets/css/navigation.css",
-  "assets/images/icons-512.jpg",
-  "assets/images/icons-192.jpg",
-  "assets/images/UTtix-trans.png",
-  "assets/js/bootstrap.js",
-  "assets/js/bootstrap.js.map",
-  "assets/js/jquery-3.6.1.min.js",
   "assets/js/script.js",
   "index.html",
 ];
