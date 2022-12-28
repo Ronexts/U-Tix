@@ -159,10 +159,10 @@ function masuk(){
   masuk.innerHTML = 
   '<div class="text-center py-4">' +
   '<p class="headline5 color-black500 semibold mb-2 flex-fill text-center">Masuk/Log in Akun</p>' +
-  '<input type="text" placeholder="Masukkan email atau id anda ..." class=" shadow-md rounded mt-2 px-0 py-2 w-80"> </input>' +
-  '<input type="password" placeholder="Masukkan password anda ..." class="shadow-md rounded mt-2 mb-4 px-0 py-2 w-80"> </input>' +
+  '<input type="text" placeholder="Masukkan email atau id anda ..." class=" shadow-md rounded mt-2 px-0 py-2 w-60"> </input>' +
+  '<input type="password" placeholder="Masukkan password anda ..." class="shadow-md rounded mt-2 mb-4 px-0 py-2 w-60"> </input>' +
   '<br><a href="#" class="pt-2 italic text-blue-500" onclick="fiturGagal();">Lupa passord?</a>' +
-  '<br><button class="mt-4 w-60 h-10 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext2" onclick="fiturGagal();">Masuk</button>' +
+  '<br><button class="mt-4 w-48 h-10 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext2" onclick="fiturGagal();">Masuk</button>' +
   
   '</div>';
 }
@@ -172,10 +172,10 @@ function daftar(){
   masuk.innerHTML = 
   '<div class="text-center py-4">' +
   '<p class="headline5 color-black500 semibold mb-2 flex-fill text-center">Mendaftar/Sign up Akun</p>' +
-  '<input type="text" placeholder="Masukkan email anda ..." class=" shadow-md rounded mt-2 px-0 py-2 w-80"> </input>' +
-  '<input type="password" placeholder="Masukkan password anda ..." class=" shadow-md rounded mt-2 px-0 py-2 w-80"> </input>' +
-  '<input type="password" placeholder="Konfirmasi password ..." class=" shadow-md rounded mt-2 px-0 py-2 w-80"> </input>' +
-  '<button class="mt-4 w-60 h-10 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext2" onclick="fiturGagal();">Daftar</button>' +
+  '<input type="text" placeholder="Masukkan email anda ..." class=" shadow-md rounded mt-2 px-0 py-2 w-60"> </input>' +
+  '<input type="password" placeholder="Masukkan password anda ..." class=" shadow-md rounded mt-2 px-0 py-2 w-60"> </input>' +
+  '<input type="password" placeholder="Konfirmasi password ..." class=" shadow-md rounded mt-2 px-0 py-2 w-60"> </input>' +
+  '<button class="mt-4 w-48 h-10 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext2" onclick="fiturGagal();">Daftar</button>' +
   '</div>'
 }
 
