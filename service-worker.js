@@ -1,7 +1,7 @@
-const CACHE_NAME = "utix";
+const CACHE_NAME = "utixTicket";
 const toCache = [
   "/",
-  "/manifest.json",
+  "manifest.json",
   "assets/js/register.js",
   "assets/css/bootstrap.css",
   "assets/css/bootstrap.css.map",
