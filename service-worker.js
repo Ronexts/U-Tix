@@ -1,8 +1,8 @@
-const CACHE_NAME = "utixonlineticket";
+const CACHE_NAME = "utix-lite";
 const toCache = [
   "/",
   "manifest.json",
-  "assets/register.js",
+  "assets/js/register.js",
   "assets/css/bootstrap.css",
   "assets/css/bootstrap.css.map",
   "assets/css/styles.css",
