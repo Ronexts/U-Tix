@@ -36,12 +36,12 @@ function home() {
       $("#profil").removeClass("active");
       $("#infos").removeClass("active");
       $("#load_data").html("");
-      start = 0;
-      lazzy_loader(limit);
-      if (action == "inactive") {
-        action = "active";
-        fetching_data(limit, start, search);
-      }
+      // start = 0;
+      // lazzy_loader(limit);
+      // if (action == "inactive") {
+      //   action = "active";
+        // fetching_data(limit, start, search);
+      // }
     },
   });
 }
@@ -64,12 +64,12 @@ function katalog() {
       $("#profil").removeClass("active");
       $("#infos").removeClass("active");
       $("#load_data").html("");
-      start = 0;
-      lazzy_loader(limit);
-      if (action == "inactive") {
-        action = "active";
-        fetching_data(limit, start, search);
-      }
+      // start = 0;
+      // lazzy_loader(limit);
+      // if (action == "inactive") {
+      //   action = "active";
+        // fetching_data(limit, start, search);
+      // }
     },
   });
 }
@@ -242,9 +242,9 @@ function terimaKasih(){
 }*/
 
 //fungsi ini digunakan untuk mem format angka kedalam format curency
-function numFormat(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+// function numFormat(x) {
+//   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+// }
 
 function mdOpen() {
   $("#md-barang").modal("show");
@@ -296,11 +296,11 @@ function mdOpen() {
 //   });
 // });
 
-function dialog(id) {
-  $("#md-dialog").modal("show");
-  $("#btnEdit").attr("data-id", id);
-  $("#btnHapus").attr("data-id", id);
-}
+// function dialog(id) {
+//   $("#md-dialog").modal("show");
+//   $("#btnEdit").attr("data-id", id);
+//   $("#btnHapus").attr("data-id", id);
+// }
 
 // function edit(id) {
 //   $("#form-barang")[0].reset();
@@ -405,36 +405,36 @@ function dialog(id) {
 //   });
 // }
   
-function lazzy_loader(limit) {
-  var output = "";
-  for (var count = 0; count < limit; count++) {
-    output += `
-      <a class="product-items w-50 flex-column shimmer" href="javascript:void(0)">
-        <div class="product-cover animate mb-2" ></div>
-        <p class="bodytext1 semibold m-0 px-2 text-secondary animate mb-2"></p>
-        <p class="bodytext2 color-black300 m-0 px-2 animate mb2"></p>
-        <p class="caption m-0 py-1 px-2 text-primary animate"></p>
-      </a>`;
-  }
-  $("#load_data_message").html(output);
-}
+// function lazzy_loader(limit) {
+//   var output = "";
+//   for (var count = 0; count < limit; count++) {
+//     output += `
+//       <a class="product-items w-50 flex-column shimmer" href="javascript:void(0)">
+//         <div class="product-cover animate mb-2" ></div>
+//         <p class="bodytext1 semibold m-0 px-2 text-secondary animate mb-2"></p>
+//         <p class="bodytext2 color-black300 m-0 px-2 animate mb2"></p>
+//         <p class="caption m-0 py-1 px-2 text-primary animate"></p>
+//       </a>`;
+//   }
+//   $("#load_data_message").html(output);
+// }
 
-$(window).scroll(function () {
-  if ($(window).scrollTop() + $(window).height() > $("#load_data").height() && action == "inactive" && result == 1) {
-    lazzy_loader(limit);
-    action = "active";
-    start = start + limit;
-    setTimeout(function () {
-      fetching_data(limit, start, search);
-    }, 1000);
-  }
-});
+// $(window).scroll(function () {
+//   if ($(window).scrollTop() + $(window).height() > $("#load_data").height() && action == "inactive" && result == 1) {
+//     lazzy_loader(limit);
+//     action = "active";
+//     start = start + limit;
+//     setTimeout(function () {
+//       fetching_data(limit, start, search);
+//     }, 1000);
+//   }
+// });
   
-function searchHandler() {
-  $("#load_data").html("");
-  search = $("#search").val();
-  fetching_data(limit, start, search);
-}
+// function searchHandler() {
+//   $("#load_data").html("");
+//   search = $("#search").val();
+//   fetching_data(limit, start, search);
+// }
 
 // splash
 // let intro = document.querySelector('#intro');
