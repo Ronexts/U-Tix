@@ -253,48 +253,48 @@ function mdOpen() {
   $("#form-barang")[0].reset();
 }
   
-$(function () {
-  // when the form is submitted
-  $("#form-barang").on("submit", function(e) {
-    // if the validator does not prevent form submit
-    if (!e.isDefaultPrevented()) {
-      Swal.fire("Sedang menyimpan data");
-      Swal.showLoading();
-      $("#btnSubmit").text("Menyimpan...");
-      $("#btnSubmit").attr("disabled", true);
-      var formData = new FormData($("#form-barang")[0]);
-      $.ajax({
-        url: "http://localhost/api_toko_online/produk/simpan",
-        type: "POST",
-        data: formData,
-        contentType: false,
-        processData: false,
-        dataType: "JSON",
-        success: function (data) {
-          if (data.status) {
-            $("#form-barang")[0].reset();
-            $("#md-barang").modal("hide");
-            fetching_data();
-            Swal.fire({
-              text: data.message,
-              icon: "success",
-              confirmButtonText: "Ok",
-            });
-          } else {
-            Swal.fire({
-              text: data.message,
-              icon: "error",
-              confirmButtonText: "Ok",
-            });
-          }
-          $("#btnSubmit").text("Simpan");
-          $("#btnSubmit").attr("disabled", false);
-        },
-      });
-      return false;
-    }
-  });
-});
+// $(function () {
+//   // when the form is submitted
+//   $("#form-barang").on("submit", function(e) {
+//     // if the validator does not prevent form submit
+//     if (!e.isDefaultPrevented()) {
+//       Swal.fire("Sedang menyimpan data");
+//       Swal.showLoading();
+//       $("#btnSubmit").text("Menyimpan...");
+//       $("#btnSubmit").attr("disabled", true);
+//       var formData = new FormData($("#form-barang")[0]);
+//       $.ajax({
+//         url: "http://localhost/api_toko_online/produk/simpan",
+//         type: "POST",
+//         data: formData,
+//         contentType: false,
+//         processData: false,
+//         dataType: "JSON",
+//         success: function (data) {
+//           if (data.status) {
+//             $("#form-barang")[0].reset();
+//             $("#md-barang").modal("hide");
+//             fetching_data();
+//             Swal.fire({
+//               text: data.message,
+//               icon: "success",
+//               confirmButtonText: "Ok",
+//             });
+//           } else {
+//             Swal.fire({
+//               text: data.message,
+//               icon: "error",
+//               confirmButtonText: "Ok",
+//             });
+//           }
+//           $("#btnSubmit").text("Simpan");
+//           $("#btnSubmit").attr("disabled", false);
+//         },
+//       });
+//       return false;
+//     }
+//   });
+// });
 
 function dialog(id) {
   $("#md-dialog").modal("show");
@@ -302,108 +302,108 @@ function dialog(id) {
   $("#btnHapus").attr("data-id", id);
 }
 
-function edit(id) {
-  $("#form-barang")[0].reset();
-  $("#md-dialog").modal("hide");
-  $("#md-barang").modal("show");
-  $("#md-barang-title").html("Edit Event");
-  $("#image").attr("required", false);
-  $.ajax({
-    type: "GET",
-    url: "http://localhost/api_toko_online/produk/detail/" + id,
-    dataType: "JSON",
-    success: function (response) {
-      if (response.status) {
-        $("#id").val(response.data.id);
-        $("#nama").val(response.data.nama);
-        $("#harga").val(response.data.harga);
-        $("#deskripsi").val(response.data.deskripsi);
-      } else {
-        Swal.fire({
-          text: response.message,
-          icon: "error",
-          confirmButtonText: "Ok",
-        });
-      }
-    },
-  });
-}
+// function edit(id) {
+//   $("#form-barang")[0].reset();
+//   $("#md-dialog").modal("hide");
+//   $("#md-barang").modal("show");
+//   $("#md-barang-title").html("Edit Event");
+//   $("#image").attr("required", false);
+//   $.ajax({
+//     type: "GET",
+//     url: "http://localhost/api_toko_online/produk/detail/" + id,
+//     dataType: "JSON",
+//     success: function (response) {
+//       if (response.status) {
+//         $("#id").val(response.data.id);
+//         $("#nama").val(response.data.nama);
+//         $("#harga").val(response.data.harga);
+//         $("#deskripsi").val(response.data.deskripsi);
+//       } else {
+//         Swal.fire({
+//           text: response.message,
+//           icon: "error",
+//           confirmButtonText: "Ok",
+//         });
+//       }
+//     },
+//   });
+// }
 
-function hapus(id) {
-  Swal.fire({
-    title: "Data Event Akan Dihapus?",
-    text: "Data yang di hapus tidak dapat di kembalikan",
-    icon: "question",
-    showCancelButton: true,
-    confirmButtonText: "Hapus",
-    confirmButtonColor: "#3085d6",
-    cancelButtonText: "Batal",
-    cancelButtonColor: "#d33",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire("Sedang menghapus data");
-      Swal.showLoading();
-      $.ajax({
-        type: "GET",
-        url: "http://localhost/api_toko_online/produk/hapus/" + id,
-        dataType: "JSON",
-        success: function (response) {
-          if (response.status) {
-            Swal.fire({
-              text: response.message,
-              icon: "success",
-              confirmButtonText: "Ok",
-            });
-            fetching_data();
-            $("#md-dialog").modal("hide");
-          } else {
-            Swal.fire({
-              text: response.message,
-              icon: "error",
-              confirmButtonText: "Ok",
-            });
-          }
-        },
-      });
-    }
-  });
-}
+// function hapus(id) {
+//   Swal.fire({
+//     title: "Data Event Akan Dihapus?",
+//     text: "Data yang di hapus tidak dapat di kembalikan",
+//     icon: "question",
+//     showCancelButton: true,
+//     confirmButtonText: "Hapus",
+//     confirmButtonColor: "#3085d6",
+//     cancelButtonText: "Batal",
+//     cancelButtonColor: "#d33",
+//   }).then((result) => {
+//     if (result.isConfirmed) {
+//       Swal.fire("Sedang menghapus data");
+//       Swal.showLoading();
+//       $.ajax({
+//         type: "GET",
+//         url: "http://localhost/api_toko_online/produk/hapus/" + id,
+//         dataType: "JSON",
+//         success: function (response) {
+//           if (response.status) {
+//             Swal.fire({
+//               text: response.message,
+//               icon: "success",
+//               confirmButtonText: "Ok",
+//             });
+//             fetching_data();
+//             $("#md-dialog").modal("hide");
+//           } else {
+//             Swal.fire({
+//               text: response.message,
+//               icon: "error",
+//               confirmButtonText: "Ok",
+//             });
+//           }
+//         },
+//       });
+//     }
+//   });
+// }
   
-function fetching_data(limit, start, search) {
-  $.ajax({
-    url: "http://localhost/api_toko_online/produk/list",
-    method: "POST",
-    data: {
-      limit: limit,
-      start: start,
-      search: search,
-    },
-    dataType: "JSON",
-    cache: false,
-    success: function (response) {
-      result = response.result;
-      if (response.status) {
-        let card_data = "";
-        $.each(response.data, function (i, v) {
-          card_data = ` <div class="product-items w-50 flex-column"><a href="javascript:void(0)" onclick="dialog('${v.id}');">
-          <div class="product-cover mb-2" style="background-image:url('${v.img}');"></div>
-          <p class="bodytext1 semibold m-0 px-2 text-secondary">${v.nama}</p>
-          <p class="bodytext2 color-black300 m-0 px-2">${v.deskripsi.substring(0,40)}</p>
-          <p class="caption m-0 py-1 px-2 text-primary">Rp.${numFormat(v.harga)}</p></a>
-          <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3 " onclick="profilIn();">Pesan Tiket</button>
-          </div>`;
-          $("#load_data").append(card_data);
-        });
-        action = "inactive";
-        $("#load_data_message").html("");
-      } else {
-        $("#load_data").html("");
-        $("#load_data_message").html('<div class="col-12 text-center"><h4 class="text-danger">Waduh! Event yang anda cari tidak ditemukan</h4></div>');
-        action = "active";
-      }
-    },
-  });
-}
+// function fetching_data(limit, start, search) {
+//   $.ajax({
+//     url: "http://localhost/api_toko_online/produk/list",
+//     method: "POST",
+//     data: {
+//       limit: limit,
+//       start: start,
+//       search: search,
+//     },
+//     dataType: "JSON",
+//     cache: false,
+//     success: function (response) {
+//       result = response.result;
+//       if (response.status) {
+//         let card_data = "";
+//         $.each(response.data, function (i, v) {
+//           card_data = ` <div class="product-items w-50 flex-column"><a href="javascript:void(0)" onclick="dialog('${v.id}');">
+//           <div class="product-cover mb-2" style="background-image:url('${v.img}');"></div>
+//           <p class="bodytext1 semibold m-0 px-2 text-secondary">${v.nama}</p>
+//           <p class="bodytext2 color-black300 m-0 px-2">${v.deskripsi.substring(0,40)}</p>
+//           <p class="caption m-0 py-1 px-2 text-primary">Rp.${numFormat(v.harga)}</p></a>
+//           <button class="w-full h-8 mt-1 bg-orange-400 hover:bg-orange-500 rounded-2xl text-white bodytext3 " onclick="profilIn();">Pesan Tiket</button>
+//           </div>`;
+//           $("#load_data").append(card_data);
+//         });
+//         action = "inactive";
+//         $("#load_data_message").html("");
+//       } else {
+//         $("#load_data").html("");
+//         $("#load_data_message").html('<div class="col-12 text-center"><h4 class="text-danger">Waduh! Event yang anda cari tidak ditemukan</h4></div>');
+//         action = "active";
+//       }
+//     },
+//   });
+// }
   
 function lazzy_loader(limit) {
   var output = "";
