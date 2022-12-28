@@ -1,7 +1,7 @@
-const CACHE_NAME = "SW-001";
+const CACHE_NAME = "utix";
 const toCache = [
   "/",
-  "manifest.json",
+  "/manifest.json",
   "assets/js/register.js",
   "assets/css/bootstrap.css",
   "assets/css/bootstrap.css.map",
